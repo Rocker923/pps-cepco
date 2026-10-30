@@ -1,0 +1,9 @@
+# Las bitácoras originales contienen firmas y sellos escaneados: se usan
+# localmente para generar data/actividades.js, pero no se publican.
+bitacoras/*.xlsx
+bitacoras/*.pdf
+~$*
+_site/
+__pycache__/
+.DS_Store
+Thumbs.db

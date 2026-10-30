@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Práctica Profesional Supervisada · CEPCO</title>
+<meta name="description" content="Bitácora interactiva de la Práctica Profesional Supervisada de Ingeniería Mecánica Industrial (UNAH) en Choloma Electric Power Corporation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="wrap">
+    <div>
+      <div class="marca">UNAH · Bitácora de práctica</div>
+      <h1>Práctica Profesional Supervisada UNAH Ingeniería Mecánica Industrial</h1>
+      <p class="sub">Choloma Electric Power Corporation, Ingeniero Donald Noé Medina Díaz</p>
+      <p class="sub2">Supervisor: Ingeniero Julio Cesar Ruíz Ramírez</p>
+    </div>
+    <dl class="cajetin" id="cajetin" aria-label="Resumen de la práctica"></dl>
+  </div>
+</header>
+
+<main>
+  <section class="portada wrap" id="portada" aria-label="Imágenes destacadas" hidden>
+    <div class="mosaico" id="mosaico"></div>
+  </section>
+
+  <section class="wrap" aria-labelledby="titulo-gantt">
+    <div class="herramientas">
+      <h2 id="titulo-gantt">Cronograma de actividades <small id="conteo"></small></h2>
+      <label class="buscar" for="buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="buscar" type="search" placeholder="Buscar actividad, equipo, norma…" aria-label="Buscar actividades" autocomplete="off">
+      </label>
+      <div class="grupo-botones">
+        <button class="boton" id="btn-expandir" type="button">Expandir todo</button>
+        <button class="boton" id="btn-contraer" type="button">Contraer todo</button>
+        <button class="boton" id="btn-zoom" type="button" aria-pressed="false" title="Cambiar el ancho de los días">Vista compacta</button>
+      </div>
+    </div>
+    <div class="areas" id="areas" role="group" aria-label="Filtrar por área de trabajo"></div>
+  </section>
+
+  <section class="gantt-marco wrap" aria-label="Diagrama de Gantt">
+    <div class="gantt" id="gantt"></div>
+    <p class="nota-pie">Haga clic en una actividad para ver el desglose, fotografías y planos. Las franjas rayadas son días sin bitácora registrada.</p>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <span>Universidad Nacional Autónoma de Honduras · Departamento de Ingeniería Mecánica</span>
+    <span id="actualizado"></span>
+  </div>
+</footer>
+
+<div class="velo" id="velo" hidden></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-titulo" hidden>
+  <div class="panel-cab">
+    <span class="codigo" id="panel-codigo"></span>
+    <span class="espacio"></span>
+    <button class="icono-btn" id="panel-prev" type="button" aria-label="Actividad anterior" title="Actividad anterior (←)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="icono-btn" id="panel-next" type="button" aria-label="Actividad siguiente" title="Actividad siguiente (→)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+    <button class="icono-btn" id="panel-cerrar" type="button" aria-label="Cerrar" title="Cerrar (Esc)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="panel-cuerpo" id="panel-cuerpo"></div>
+</aside>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Visor de imágenes" hidden>
+  <div class="visor-cab">
+    <button class="icono-btn" id="visor-cerrar" type="button" aria-label="Cerrar visor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="visor-img">
+    <button class="icono-btn prev" id="visor-prev" type="button" aria-label="Imagen anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+    <img id="visor-foto" alt="">
+    <button class="icono-btn next" id="visor-next" type="button" aria-label="Imagen siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
+  <div class="visor-pie" id="visor-pie"></div>
+</div>
+
+<script src="data/actividades.js"></script>
+<script src="data/medios.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
