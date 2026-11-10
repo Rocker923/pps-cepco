@@ -90,7 +90,7 @@ window.PPS_DATOS = {
      "id": "S01-A06",
      "semana": 1,
      "n": 6,
-     "titulo": "Conversasión ténica con el ing Osman Alcerro, jefe de mantenimiento mecánico. Reconocimiento de equipo de alineamiento laser.",
+     "titulo": "Conversasión ténica con el ing jefe de mantenimiento mecánico. Reconocimiento de equipo de alineamiento laser.",
      "fecha": "2026-07-22",
      "observacion": "",
      "desglose": "Conversación técnica sobre eficiencia de consumo de carbón, composición química del carbón y reconocimiento de equipo de alineación por láser. Reconocimiento de equipo para termografía, ultrasonido de espesores.",
