@@ -41,6 +41,8 @@ media/
 - **Portada**: hasta 5 imágenes. Las de `media/portada/` se muestran tal cual; una imagen de actividad cuyo nombre empieza con `portada` además abre esa actividad al hacer clic.
 - **Notas** (`notas.md`): párrafos, `## subtítulos`, listas con `- `, **negrita** con `**texto**` y enlaces `[texto](https://…)`.
 
+**Atajo para muchas fotos:** póngalas todas en `media/Fotos de las actividades/` con el nombre `S01-A09_2_Descripcion_de_la_foto.jpeg` y ejecute `python tools/colocar_fotos.py` (use `--prueba` para ver antes qué hará). Cada foto se mueve a su carpeta como `02_Descripcion_de_la_foto.jpeg`; las que no tienen código se quedan ahí. Esa carpeta no se sube a GitHub.
+
 Subirlos desde la web de GitHub: entre a la carpeta `media/` → **Add file → Upload files** → arrastre la carpeta `S05-A01` completa con sus archivos → **Commit changes**.
 
 Recomendaciones:

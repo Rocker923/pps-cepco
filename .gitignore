@@ -7,3 +7,6 @@ _site/
 __pycache__/
 .DS_Store
 Thumbs.db
+
+# Carpeta de trabajo: fotos aún sin clasificar (tools/colocar_fotos.py las mueve)
+media/Fotos de las actividades/
